@@ -87,7 +87,7 @@ int _strlen(char *s);
 int _printf(const char *format, ...);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
-int print_S(va_list list, params_t *params);
+int print_STRING(va_list list, params_t *params);
 int print_rev(va_list list, params_t *params);
 int print_hex(va_list list, params_t *params);
 int print_HEX(va_list list, params_t *params);
@@ -103,12 +103,13 @@ int print_percent(va_list list, params_t *params);
 int print_address(va_list list, params_t *params);
 int print_unsigned(va_list list, params_t *params);
 char *get_width(char *s, params_t *params, va_list list);
-int print_from_to(char *start, char *stop, char *except);
+int print_range(char *start, char *stop, char *except);
 int print_number_left_shift(char *str, params_t *params);
 int print_number_right_shift(char *str, params_t *params);
-int get_print_func(char *s, va_list list, params_t *params);
+int get_print_format(char *s, va_list list, params_t *params);
 char *get_precision(char *p, params_t *params, va_list list);
 int (*get_specifier(char *s))(va_list list, params_t *params);
 char *convert(long int num, int base, int flags, params_t *params);
+int str_length(char *str);
 
 #endif
