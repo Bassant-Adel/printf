@@ -28,6 +28,6 @@ int get_flag(char *str, params_t *params)
 		case '0':
 			flag = params->zero_flag = 1;
 			break;
-	}
-	return (flag);
+
+	}	return (flag);
 }
