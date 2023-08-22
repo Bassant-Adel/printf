@@ -34,6 +34,8 @@ char *convert(long int num, int base, int flags, params_t *params)
 	} while (n != 0);
 
 	if (sign)
+	{
 		*--ptr = sign;
-	return (ptr);
+
+	}	return (ptr);
 }
