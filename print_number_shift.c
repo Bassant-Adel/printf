@@ -21,7 +21,7 @@ int print_number_right_shift(char *str, params_t *params)
 	else
 		neg = 0;
 	if ((params->plus_flag && !neg2) ||
-      (!params->plus_flag && params->space_flag && !neg2))
+			(!params->plus_flag && params->space_flag && !neg2))
 		width++;
 	if (neg && flag == '0')
 		sum += _putchar('-');
@@ -70,6 +70,8 @@ int print_number_left_shift(char *str, params_t *params)
 		sum += _putchar(' '), width++;
 	sum += _puts(str);
 	while (width++ < params->width)
+	{
 		sum += _putchar(flag);
-	return (sum);
+
+	}	return (sum);
 }

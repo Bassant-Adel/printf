@@ -5,6 +5,7 @@
  * @str: the format string
  * Return: the num of bytes printed
  */
+
 int (*get_specifier(char *str))(va_list list, params_t *params)
 {
 	specifier_t specifiers[] = {
@@ -32,8 +33,8 @@ int (*get_specifier(char *str))(va_list list, params_t *params)
 		if (*str == specifiers[i].specifier[0])
 		{
 			return (specifiers[i].f);
-		}
-		i++;
-	}
-	return (NULL);
+
+		}		i++;
+
+	}	return (NULL);
 }

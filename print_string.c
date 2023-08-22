@@ -38,8 +38,8 @@ int print_string(va_list list, params_t *params)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
-	}
-	return (sum);
+
+	}	return (sum);
 }
 
 /**
@@ -72,6 +72,6 @@ int print_STRING(va_list list, params_t *params)
 		{
 			sum += _putchar(*str);
 		}
-	}
-	return (sum);
+
+	}	return (sum);
 }

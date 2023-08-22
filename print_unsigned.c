@@ -13,10 +13,15 @@ int print_unsigned(va_list list, params_t *params)
 
 	if (params->l_modifier)
 		num = (unsigned long)va_arg(list, unsigned long);
+
 	else if (params->h_modifier)
 		num = (unsigned short int)va_arg(list, unsigned int);
+
 	else
+	{
 		num = (unsigned int)va_arg(list, unsigned int);
-	params->unsign = 1;
+
+	}	params->unsign = 1;
+
 	return (print_number(convert(num, 10, CONVERT_UNSIGNED, params), params));
 }
