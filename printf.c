@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 			sum += print_from_to(start, a,
 				params.l_modifier || params.h_modifier ? a - 1 : 0);
 		else
-			sum += get_print_func(a, list, &params);
+			sum += get_print_format(a, list, &params);
 	}	_putchar(BUF_FLUSH);
 	va_end(list);
 	return (sum);
