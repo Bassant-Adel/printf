@@ -14,19 +14,26 @@ int print_number(char *str, params_t *params)
 
 	if (!params->precision && *str == '0' && !str[1])
 		str = "";
+
 	if (neg)
 	{
 		str++;
 		precision--;
 	}
+
 	if (params->precision != UINT_MAX)
 		while (precision++ < params->precision)
 			*--str = '0';
+
 	if (neg)
 		*--str = '-';
 
 	if (!params->minus_flag)
 		return (print_number_right_shift(str, params));
+
 	else
+	{
 		return (print_number_left_shift(str, params));
+	}
+
 }

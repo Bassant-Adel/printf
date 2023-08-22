@@ -22,7 +22,12 @@ int print_octal(va_list list, params_t *params)
 	str = convert(num, 8, CONVERT_UNSIGNED, params);
 
 	if (params->hashtag_flag && num)
+	{
+
 		*--str = '0';
-	params->unsign = 1;
+
+	}	params->unsign = 1;
+
 	return (ch += print_number(str, params));
+
 }
