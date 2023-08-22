@@ -51,11 +51,14 @@ int print_HEX(va_list list, params_t *params)
 		num = (unsigned int)va_arg(list, unsigned int);
 
 	str = convert(num, 16, CONVERT_UNSIGNED, params);
+
 	if (params->hashtag_flag && num)
 	{
 		*--str = 'X';
 		*--str = '0';
-	}
-	params->unsign = 1;
+
+	}	params->unsign = 1;
+
 	return (ch += print_number(str, params));
+
 }

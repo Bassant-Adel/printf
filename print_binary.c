@@ -14,7 +14,12 @@ int print_binary(va_list list, params_t *params)
 	unsigned int num = va_arg(list, unsigned int);
 
 	if (params->hashtag_flag && num)
+	{
+
 		*--str = '0';
-	params->unsign = 1;
+
+	}	params->unsign = 1;
+
 	return (ch += print_number(str, params));
+
 }
