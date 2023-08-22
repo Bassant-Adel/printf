@@ -17,7 +17,7 @@ int print_string(va_list list, params_t *params)
 		case 1:
 			str = NULL_STRING;
 
-	z = pad = _strlen(str);
+	z = pad = str_length(str);
 	if (params->precision < pad)
 		z = pad = params->precision;
 
