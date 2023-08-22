@@ -20,7 +20,10 @@ int is_digit(int ch)
 int str_length(char *str)
 {
 	int len = 0;
+
 	while (*str++)
 		len++;
+
 	return (len);
+
 }
