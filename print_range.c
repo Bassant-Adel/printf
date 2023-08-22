@@ -16,7 +16,9 @@ int print_range(char *start, char *stop, char *except)
 	{
 		if (start != except)
 			count += _putchar(*start);
+
 		start++;
-	}
-	return (count);
+
+	}	return (count);
+
 }

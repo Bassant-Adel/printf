@@ -10,6 +10,9 @@
 int print_percent(va_list list, params_t *params)
 {
 	(void)list;
+
 	(void)params;
+
 	return (_putchar('%'));
+
 }
