@@ -9,7 +9,7 @@
 
 int print_string(va_list list, params_t *params)
 {
-	char *str = va_arg(list, char *), flag = ' ';
+	char *str = va_arg(list, char *), pad_char = ' ';
 	unsigned int flag = 0, sum = 0, i = 0, z;
 
 	(void)params;
@@ -30,7 +30,7 @@ int print_string(va_list list, params_t *params)
 			sum += _puts(str);
 	}
 	while (z++ < params->width)
-		sum += _putchar(flag);
+		sum += _putchar(pad_char);
 	if (!params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
