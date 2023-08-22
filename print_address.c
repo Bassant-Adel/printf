@@ -1,3 +1,4 @@
+#include "main.h"
 
 /**
  * print_address - Prints hexadecimal representation of an address
