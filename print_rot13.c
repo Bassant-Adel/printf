@@ -27,8 +27,10 @@ int print_rot13(va_list list, params_t *params)
 			count += _putchar(arr[index]);
 		}
 		else
+		{
 			count += _putchar(a[j]);
-		j++;
-	}
-	return (count);
+
+		}		j++;
+
+	}	return (count);
 }
