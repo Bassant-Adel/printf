@@ -81,7 +81,7 @@ typedef struct specifier
 /* ALL Prototypes */
 
 int _putchar(int c);
-int _isdigit(int c);
+int is_digit(int c);
 int _puts(char *str);
 int _strlen(char *s);
 int _printf(const char *format, ...);
