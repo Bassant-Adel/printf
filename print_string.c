@@ -10,21 +10,21 @@
 int print_string(va_list list, params_t *params)
 {
 	char *str = va_arg(list, char *), pad_char = ' ';
-	unsigned int flag = 0, sum = 0, i = 0, z;
+	unsigned int pad = 0, sum = 0, i = 0, z;
 
 	(void)params;
 	switch ((int)(!str))
 		case 1:
 			str = NULL_STRING;
 
-	z = flag = str_length(str);
-	if (params->precision < flag)
-		z = flag = params->precision;
+	z = pad = _strlen(str);
+	if (params->precision < pad)
+		z = pad = params->precision;
 
 	if (params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (i = 0; i < flag; i++)
+			for (i = 0; i < pad; i++)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
@@ -34,7 +34,7 @@ int print_string(va_list list, params_t *params)
 	if (!params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (i = 0; i < flag; i++)
+			for (i = 0; i < pad; i++)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
@@ -52,8 +52,8 @@ int print_string(va_list list, params_t *params)
 int print_STRING(va_list list, params_t *params)
 {
 	char *str = va_arg(list, char *);
-	int sum = 0;
 	char *hex;
+	int sum = 0;
 
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
