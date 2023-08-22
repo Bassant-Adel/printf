@@ -16,7 +16,10 @@ int print_address(va_list list, params_t *params)
 		return (_puts("(nil)"));
 
 	str = convert(num, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+
 	*--str = 'x';
 	*--str = '0';
+
 	return (print_number(str, params));
+
 }
