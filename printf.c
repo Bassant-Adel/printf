@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 		if (get_modifier(a, &params))
 			a++;
 		if (!get_specifier(a))
-			sum += print_from_to(start, a,
+			sum += print_range(start, a,
 				params.l_modifier || params.h_modifier ? a - 1 : 0);
 		else
 			sum += get_print_format(a, list, &params);
