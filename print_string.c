@@ -51,9 +51,9 @@ int print_string(va_list list, params_t *params)
 
 int print_STRING(va_list list, params_t *params)
 {
-	char *hex;
-	int sum = 0;
 	char *str = va_arg(list, char *);
+	int sum = 0;
+	char *hex;
 
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
