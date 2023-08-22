@@ -16,10 +16,13 @@ print_reverse(va_list list, params_t *params)
 	if (str)
 	{
 		for (i = 0; *str; str++)
+		{
 			i++;
-		str--;
+
+		}		str--;
+
 		for (; i > 0; i--, str--)
 			sum += _putchar(*str);
-	}
-	return (sum);
+
+	}	return (sum);
 }
