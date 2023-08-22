@@ -9,9 +9,9 @@
 
 int print_binary(va_list list, params_t *params)
 {
-	char *str = convert(num, 2, CONVERT_UNSIGNED, params);
 	int ch = 0;
 	unsigned int num = va_arg(list, unsigned int);
+	char *str = convert(num, 2, CONVERT_UNSIGNED, params);
 
 	if (params->hashtag_flag && num)
 	{

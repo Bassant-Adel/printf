@@ -7,7 +7,7 @@
  *Return: The number bytes printed
  */
 
-print_reverse(va_list list, params_t *params)
+int print_reverse(va_list list, params_t *params)
 {
 	int i, sum = 0;
 	char *str = va_arg(list, char *);

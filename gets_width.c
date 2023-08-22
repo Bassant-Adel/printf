@@ -24,7 +24,7 @@ char *get_width(char *s, params_t *params, va_list list)
 	else
 	{
 
-		while (_isdigit(*s))
+		while (is_digit(*s))
 		{
 			n = n * 10 + (*s++ - '0');
 		}

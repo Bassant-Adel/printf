@@ -31,7 +31,7 @@ char *get_precision(char *p, params_t *params, va_list list)
 	else
 	{
 
-		while (_isdigit(*p))
+		while (is_digit(*p))
 		{
 			n = n * 10 + (*p++ - '0');
 		}

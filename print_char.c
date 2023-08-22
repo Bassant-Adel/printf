@@ -9,8 +9,8 @@
 
 int print_char_num(va_list list, params_t *params)
 {
-	unsigned int width = 1, sum = 0
-		unsigned int ch = va_arg(list, int);
+	unsigned int width = 1, sum = 0;
+	unsigned int ch = va_arg(list, int);
 	char space = ' ';
 
 	if (params->minus_flag)
